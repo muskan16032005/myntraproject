@@ -1,0 +1,192 @@
+<html>
+<head>
+  <title>Registration Form - Photography</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #21d4fd, #b721ff, #21d4fd);
+      min-height: 100vh;
+    }
+    .container {
+      width: 850px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px 0 rgba(31,38,135,.15);
+      display: flex;
+      overflow: hidden;
+    }
+    .left-panel {
+      width: 45%;
+      background-image: url('100.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 40px 20px;
+      position: relative;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .left-panel .logo {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      opacity: 0.86;
+    }
+    .left-panel .main-text {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+    .left-panel .sub-text {
+      font-size: 15px;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+    .left-panel .bottom-text {
+      position: absolute;
+      bottom: 24px;
+      left: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    .right-panel {
+      width: 55%;
+      background: #fff;
+      padding: 60px 35px;
+    }
+    .right-panel h2 {
+      color: #189caa;
+      margin-bottom: 5px;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .right-panel .subtitle {
+      color: #999;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+    .fa-input-group {
+      display: flex;
+      margin-bottom: 18px;
+      align-items: center;
+    }
+    .fa-input-icon {
+      background: dodgerblue;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+    }
+    .fa-input {
+      width: 220px;
+      height: 40px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border: 1px solid #e0e0e0;
+      border-left: none;
+      font-size: 16px;
+      padding-left: 12px;
+      outline: none;
+      background: #f7f8fa;
+    }
+    .gender-group {
+      margin-bottom: 18px;
+      color: #555;
+      font-size: 16px;
+    }
+    .gender-group label {
+      margin-right: 17px;
+      font-weight: 500;
+    }
+    .btn-group {
+      display: flex;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .btn {
+      border: none;
+      border-radius: 4px;
+      padding: 10px 24px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-cancel {
+      background: #333;
+    }
+    .btn-confirm {
+      background: #1db7ae;
+    }
+    .btn-confirm:hover {
+      background: #189caa;
+    }
+    .btn-cancel:hover {
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <div class="logo">Photography.</div>
+      <div class="sub-text">CLICK FOR YOUR SHOOT</div>
+      <div class="main-text">Photography.</div>
+      <div class="bottom-text">JOURNEY EVERYWHERE</div>
+    </div>
+    <div class="right-panel">
+      <h2>Registration</h2>
+      <div class="subtitle">CLICK FOR YOUR SHOOT</div>
+      <form>
+        <div class="fa-input-group">
+          <span class="fa-input-icon"><i class="fa-solid fa-user"></i></span>
+          <input class="fa-input" type="text" placeholder="Name">
+        </div>
+        <div class="fa-input-group">
+          <span class="fa-input-icon"><i class="fa-solid fa-envelope"></i></span>
+          <input class="fa-input" type="email" placeholder="Email">
+        </div>
+        <div class="gender-group">
+          Gender:
+          <label><input type="radio" name="gender" checked> Male</label>
+          <label><input type="radio" name="gender"> Female</label>
+        </div>
+        <div class="fa-input-group">
+          <span class="fa-input-icon"><i class="fa-solid fa-calendar"></i></span>
+          <input class="fa-input" type="date" placeholder="Date of Birth">
+        </div>
+        <div class="fa-input-group">
+          <span class="fa-input-icon"><i class="fa-solid fa-city"></i></span>
+          <input class="fa-input" type="text" placeholder="City">
+        </div>
+        <div class="fa-input-group">
+          <span class="fa-input-icon"><i class="fa-solid fa-flag"></i></span>
+          <input class="fa-input" type="text" placeholder="Country">
+        </div>
+        <div class="fa-input-group">
+          <span class="fa-input-icon"><i class="fa-solid fa-star"></i></span>
+          <input class="fa-input" type="text" placeholder="Subscription (Bronze/Silver/Gold)">
+        </div>
+        <div class="btn-group">
+          <input class="btn btn-cancel" type="button" value="Cancel">
+          <input class="btn btn-confirm" type="submit" value="Confirm">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

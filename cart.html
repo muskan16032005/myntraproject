@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h2>🛒 My Cart</h2>
+
+<ul id="cart"></ul>
+
+<h3 id="total">Total: ₹0</h3>
+
+<button onclick="pay()">Proceed to Pay</button>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let ul = document.getElementById("cart");
+let total = 0;
+
+cart.forEach(item => {
+
+  // SAFE values
+  let name = item.name || "Product";
+  let price = Number(item.price) || 0;
+
+  let li = document.createElement("li");
+  li.innerText = name + " - ₹" + price;
+  ul.appendChild(li);
+
+  total += price;
+});
+
+document.getElementById("total").innerText = "Total: ₹" + total;
+
+function pay(){
+  if(cart.length === 0){
+    alert("Cart is empty");
+    return;
+  }
+  alert("Payment Successful ✅");
+  localStorage.removeItem("cart");
+  location.reload();
+}
+</script>
+
+</body>
+</html>
